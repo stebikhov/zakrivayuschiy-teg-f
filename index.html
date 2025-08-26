@@ -712,9 +712,11 @@
           onclick="window['dialog'].showModal()"
           aria-controls="dialog"
         >
-          <svg class="floppy footer__floppy" aria-hidden="true">
-            <use href="./svg/floppy.svg#floppy"></use>
-          </svg>
+          <span class="button__image">
+            <svg class="floppy footer__floppy" aria-hidden="true">
+              <use href="./svg/floppy.svg#floppy"></use>
+            </svg>
+          </span>
           <span class="button__text"> Сохранить на память </span>
         </button>
       </div>
@@ -726,7 +728,6 @@
       </svg>
       <h2 class="modal__title">Вставьте дискету, чтобы продолжить</h2>
       <button
-        type="button"
         type="button"
         class="button save-button modal__button"
         onclick="window['dialog'].close()"

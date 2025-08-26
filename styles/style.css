@@ -26,7 +26,6 @@ body {
 }
 
 .header {
-  width: 700px;
   margin-top: 100px;
   margin-right: auto;
   margin-bottom: 100px;
@@ -40,6 +39,9 @@ body {
   background-color: var(--color-background);
   max-inline-size: 700px;
   min-block-size: 368px;
+}
+.button__image {
+  display: inline;
 }
 
 @supports (
@@ -382,7 +384,7 @@ body {
 }
 
 .button__save {
-  inline-size: 335px;
+  inline-size: 353px;
   margin-block-end: 103px;
   block-size: 51px;
 }
@@ -395,16 +397,29 @@ body {
 }
 
 @media (width <= 600px) {
+  .header {
+    min-inline-size: 376px;
+  }
+
   .header__title {
-    font-size: var(--size-logo-header-mobile);
+    font-size: 49px;
   }
 
   .header__project_name {
     font-size: var(--size-title-header-mobile);
   }
 
-  .header {
-    min-inline-size: 371px;
+  .button__save {
+    inline-size: 253px;
+    margin-block-end: 103px;
+    block-size: 51px;
+  }
+
+  .save__container {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 40px;
+    justify-content: center;
   }
 }
 
@@ -413,7 +428,7 @@ body {
 }
 @media (width <= 376px) {
   .header {
-    max-inline-size: 371px;
+    max-inline-size: 376px;
   }
 
   .card__title {
@@ -434,15 +449,9 @@ body {
     height: 28px;
   }
 
-  .save__button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-block-end: 100px;
-    inline-size: 306px;
-    block-size: 84px;
+  .button__image {
+    display: block;
+    margin-bottom: 1ppx;
   }
 }
 
