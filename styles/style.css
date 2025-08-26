@@ -41,6 +41,17 @@ body {
   background-color: var(--color-background);
 }
 
+@supports (
+  (text-stroke: 1px var(--color-background)) or
+    (-webkit-text-stroke: 1px var(--color-background))
+) {
+  .logo {
+    text-shadow: none;
+    -webkit-text-stroke: 1px var(--color-background);
+    text-stroke: 1px var(--color-background);
+  }
+}
+
 .header__title {
   margin-block-end: 20px;
   font-size: var(--size-logo-header);
