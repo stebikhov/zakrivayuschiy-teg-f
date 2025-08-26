@@ -27,7 +27,6 @@ body {
 
 .header {
   width: 700px;
-  height: 368px;
   margin-top: 100px;
   margin-right: auto;
   margin-bottom: 100px;
@@ -39,6 +38,8 @@ body {
   align-items: center;
   font-family: var(--family-accent);
   background-color: var(--color-background);
+  max-inline-size: 700px;
+  min-block-size: 368px;
 }
 
 @supports (
@@ -53,12 +54,14 @@ body {
 }
 
 .header__title {
+  margin-top: 128px;
   margin-block-end: 20px;
   font-size: var(--size-logo-header);
   text-transform: uppercase;
 }
 
 .header__project_name {
+  margin-bottom: 128px;
   font-size: var(--size-title-header);
   text-transform: uppercase;
 }
@@ -123,21 +126,21 @@ body {
   block-size: 100%;
 }
 
-.filter___preparation_for_work {
-  filter: blur(5px) contrast(70%) brightness(85%) \grayscale(20%);
+.filter-blur-contrast {
+  filter: blur(5px);
   animation: flicker 10s infinite alternate;
 }
 
 @keyframes flicker {
   0% {
-    filter: blur(6px) contrast(40%) brightness(80%);
+    filter: blur(6px) contrast(40%);
   }
   100% {
-    filter: blur(1px) contrast(75%) brightness(90%);
+    filter: blur(1px) contrast(75%);
   }
 }
 
-.filter__ready-to-learn {
+.filter-soft-wite {
   filter: brightness(115%) /* Символ чистоты и незаполненности */ contrast(90%)
     /* Лёгкая мягкость для восприятия нового */ saturate(110%); /* Готовность к "впитыванию" цвета знаний */
   transition: filter 2s ease;
@@ -154,7 +157,7 @@ body {
   }
 }
 
-.filter__doubts {
+.filter-serpia-saturate {
   filter: saturate(30%) sepia(400%);
   position: relative;
   animation: doubts-flow 10s infinite alternate;
@@ -169,7 +172,7 @@ body {
   }
 }
 
-.filter__ideal {
+.filter-contrast-saturate {
   filter: contrast(10%) saturate(10%);
   position: relative;
   animation: ideal-flow 10s infinite alternate;
@@ -184,12 +187,12 @@ body {
   }
 }
 
-.filter__together {
+.filter-invert {
   filter: invert(100%);
   position: relative;
 }
 
-.filter__pathfinder {
+.filter-hue-rotate {
   filter: hue-rotate(45deg) /* Сдвиг восприятия реальности */ contrast(1.3)
     /* Усиление детализации проблем */ brightness(1.1)
     /* Подсветка скрытых возможностей */;
@@ -206,7 +209,7 @@ body {
   }
 }
 
-.filter__depressed {
+.filter-brithess-unclear {
   filter: brightness(0.7) /* Приглушение света - символ угасания надежды */
     contrast(0.8) /* Снижение контраста - метафора потери ясности */
     grayscale(60%) /* Обесцвечивание - уход жизненных красок */ blur(2px); /* Размытие фокуса - неспособность ясно видеть цель */
@@ -372,10 +375,9 @@ body {
   transition: fill 0.3s linear;
 }
 
-.footer {
+.save__container {
   display: flex;
-  padding-bottom: 100px;
-  min-block-size: 55px;
+  padding-bottom: 40px;
   justify-content: center;
 }
 
@@ -400,6 +402,10 @@ body {
   .header__project_name {
     font-size: var(--size-title-header-mobile);
   }
+
+  .header {
+    min-inline-size: 371px;
+  }
 }
 
 .sparks {
@@ -408,7 +414,6 @@ body {
 @media (width <= 376px) {
   .header {
     max-inline-size: 371px;
-    min-block-size: 323px;
   }
 
   .card__title {
@@ -488,8 +493,9 @@ body {
 }
 
 .floppy__modal {
-  inline-size: 38px;
-  block-size: 38px;
+  margin-top: 13px;
+  inline-size: 39px;
+  block-size: 39px;
 }
 
 .modal::backdrop {
