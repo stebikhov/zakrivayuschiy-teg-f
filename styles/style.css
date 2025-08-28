@@ -358,6 +358,8 @@ body {
   color: var(--button-hover);
   z-index: 1;
   padding-left: 5px;
+  margin-top: 8px;
+  line-height: 1;
 }
 
 .button {
@@ -383,7 +385,9 @@ body {
   inline-size: 338px;
   block-size: 28px;
   /* margin-block-end: 100px;*/
-  block-size: 55px;
+  block-size: 70px;
+  padding: 15px 0 10px 0;
+  box-sizing: border-box;
 }
 
 .footer__floppy {
@@ -409,7 +413,9 @@ body {
   .button__save {
     inline-size: 253px;
     margin-block-end: 103px;
-    block-size: 84px;
+    block-size: 70px;
+    padding: 15px 0 10px 0;
+    box-sizing: border-box;
   }
 
   .save__container {
@@ -421,7 +427,9 @@ body {
 
   .button__save {
     inline-size: 306px;
-    block-size: 84px;
+    block-size: 70px;
+    padding: 15px 0 10px 0;
+    box-sizing: border-box;
   }
 }
 
@@ -477,7 +485,7 @@ body {
 
   .button__image {
     display: block;
-    margin-bottom: 1px;
+    margin: 0;
     height: 28px;
   }
 }
@@ -502,8 +510,8 @@ body {
 }
 
 .floppy {
-  inline-size: 21px;
-  block-size: 21px;
+  inline-size: 28px;
+  block-size: 28px;
 }
 
 .modal[open] {
