@@ -38,10 +38,6 @@ body {
   font-family: var(--family-accent);
   background-color: var(--color-background);
   max-inline-size: 700px;
-  min-block-size: 368px;
-}
-.button__image {
-  display: inline;
 }
 
 @supports (
@@ -242,27 +238,6 @@ body {
   margin-block-start: 25px;
 }
 
-.button__text {
-  position: relative;
-  mix-blend-mode: difference;
-  color: var(--button-hover);
-  z-index: 1;
-}
-
-.button {
-  position: relative;
-  border: 2px solid var(--color-accent);
-  overflow: hidden;
-  font-family: var(--family-accent);
-  font-weight: var(--text-wight);
-  font-size: 14px;
-  line-height: 12.6px;
-  background-color: var(--color-background);
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
-  appearance: none;
-}
-
 .button::after {
   content: "";
   position: absolute;
@@ -376,17 +351,39 @@ body {
   fill: var(--color-sparks);
   transition: fill 0.3s linear;
 }
+/*==============================================*/
+.button__text {
+  position: relative;
+  mix-blend-mode: difference;
+  color: var(--button-hover);
+  z-index: 1;
+  padding-left: 5px;
+}
 
+.button {
+  position: relative;
+  border: 2px solid var(--color-accent);
+  overflow: hidden;
+  font-family: var(--family-accent);
+  font-weight: var(--text-wight);
+  font-size: 14px;
+  line-height: 12.6px;
+  background-color: var(--color-background);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  appearance: none;
+}
 .save__container {
   display: flex;
-  padding-bottom: 40px;
+  padding-bottom: 41px;
   justify-content: center;
 }
 
 .button__save {
-  inline-size: 353px;
-  margin-block-end: 103px;
-  block-size: 51px;
+  inline-size: 338px;
+  block-size: 28px;
+  /* margin-block-end: 100px;*/
+  block-size: 55px;
 }
 
 .footer__floppy {
@@ -412,7 +409,7 @@ body {
   .button__save {
     inline-size: 253px;
     margin-block-end: 103px;
-    block-size: 51px;
+    block-size: 84px;
   }
 
   .save__container {
@@ -420,6 +417,11 @@ body {
     flex-direction: row;
     padding-bottom: 40px;
     justify-content: center;
+  }
+
+  .button__save {
+    inline-size: 306px;
+    block-size: 84px;
   }
 }
 
@@ -429,6 +431,30 @@ body {
 @media (width <= 376px) {
   .header {
     max-inline-size: 376px;
+  }
+
+  .logo {
+    position: absolute;
+    top: 22px;
+    right: 10px;
+    z-index: 1;
+    opacity: 0.5;
+    mix-blend-mode: hard-light;
+    text-shadow: 0 1px, 1px 0, 0 -1px, -1px 0 / var(--color-background);
+    font-family: var(--family-accent);
+    font-weight: var(--text-weight);
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--color-accent);
+  }
+
+  .header__title {
+    margin-top: 120px;
+    margin-block-end: 20px;
+  }
+
+  .header__project_name {
+    margin-bottom: 120px;
   }
 
   .card__title {
@@ -445,13 +471,14 @@ body {
   }
 
   .footer__floppy {
-    width: 28px;
-    height: 28px;
+    block-size: 28px;
+    inline-size: 28px;
   }
 
   .button__image {
     display: block;
-    margin-bottom: 1ppx;
+    margin-bottom: 1px;
+    height: 28px;
   }
 }
 
