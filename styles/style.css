@@ -383,7 +383,6 @@ body {
 
 .button__save {
   inline-size: 338px;
-  block-size: 28px;
   /* margin-block-end: 100px;*/
   block-size: 55px;
   padding: 15px 0 04px 0;
@@ -422,18 +421,6 @@ body {
     font-size: var(--size-title-header-mobile);
   }
 
-  .button__save {
-    inline-size: 253px;
-    margin-block-end: 103px;
-    block-size: 84px;
-    padding: 15px 0 24px 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-  }
-
   .save__container {
     display: flex;
     flex-direction: row;
@@ -442,6 +429,7 @@ body {
   }
 
   .button__save {
+    margin-block-end: 103px;
     inline-size: 306px;
     block-size: 84px;
     padding: 25px 0 24px 0;
