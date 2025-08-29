@@ -377,7 +377,7 @@ body {
 }
 .save__container {
   display: flex;
-  padding-bottom: 41px;
+  padding-bottom: 103px;
   justify-content: center;
 }
 
@@ -385,7 +385,7 @@ body {
   inline-size: 338px;
   /* margin-block-end: 100px;*/
   block-size: 55px;
-  padding: 15px 0 04px 0;
+  padding: 5px 0 04px 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
