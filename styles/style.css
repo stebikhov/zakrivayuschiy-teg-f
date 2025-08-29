@@ -358,7 +358,7 @@ body {
   color: var(--button-hover);
   z-index: 1;
   padding-left: 5px;
-  margin-top: 8px;
+  margin: 0;
   line-height: 1;
 }
 
@@ -385,9 +385,14 @@ body {
   inline-size: 338px;
   block-size: 28px;
   /* margin-block-end: 100px;*/
-  block-size: 70px;
-  padding: 15px 0 10px 0;
+  block-size: 55px;
+  padding: 15px 0 04px 0;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
 .footer__floppy {
@@ -395,6 +400,13 @@ body {
   mix-blend-mode: difference;
   color: var(--button-hover);
   z-index: 1;
+  block-size: 21px;
+  inline-size: 21px;
+}
+
+.floppy {
+  inline-size: 21px;
+  block-size: 21px;
 }
 
 @media (width <= 600px) {
@@ -413,9 +425,13 @@ body {
   .button__save {
     inline-size: 253px;
     margin-block-end: 103px;
-    block-size: 70px;
-    padding: 15px 0 10px 0;
+    block-size: 84px;
+    padding: 15px 0 24px 0;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
   }
 
   .save__container {
@@ -427,9 +443,18 @@ body {
 
   .button__save {
     inline-size: 306px;
-    block-size: 70px;
-    padding: 15px 0 10px 0;
+    block-size: 84px;
+    padding: 25px 0 24px 0;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .floppy {
+    inline-size: 28px;
+    block-size: 28px;
   }
 }
 
@@ -477,16 +502,21 @@ body {
   .card__article {
     max-inline-size: 321px;
   }
-
+  /* 
   .footer__floppy {
     block-size: 28px;
     inline-size: 28px;
-  }
+  } */
 
   .button__image {
     display: block;
     margin: 0;
     height: 28px;
+  }
+
+  .floppy {
+    inline-size: 28px;
+    block-size: 28px;
   }
 }
 
@@ -509,11 +539,6 @@ body {
   height: 38px;
 }
 
-.floppy {
-  inline-size: 28px;
-  block-size: 28px;
-}
-
 .modal[open] {
   display: grid;
   grid-template-columns: auto auto;
@@ -526,7 +551,8 @@ body {
   line-height: 1.5;
   text-transform: uppercase;
   background-color: var(--color-background);
-  max-inline-size: 357px;
+  max-inline-size: 341px;
+  align-items: center;
 }
 
 .modal__title {
@@ -537,7 +563,6 @@ body {
 }
 
 .floppy__modal {
-  margin-top: 13px;
   inline-size: 39px;
   block-size: 39px;
 }
